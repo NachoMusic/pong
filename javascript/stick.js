@@ -17,7 +17,9 @@ function Stick(id_stick, side) {
     window.addEventListener("mousemove",
         function(e) {
             y = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-            self.locate(self.gap, y);
+            if (y < (window.innerHeight - document.getElementById(id_stick).height)) {
+                self.locate(self.gap, y);
+            }
         }, false);
     //Posicionem stick a les coordenades x,y
     this.locate = function(x, y) {
