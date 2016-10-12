@@ -6,7 +6,6 @@
   *
  */
 
-
 var subject = require('./patterns/observer/Subject');
 
 var Artifact = function(id_artifact, context_) {
@@ -55,46 +54,11 @@ var Artifact = function(id_artifact, context_) {
         },
     };
 
+
 }; //END  Ball prototype constructor
 
 //Heretem de subject
 Artifact.prototype = new subject();
-
-this.directions = {
-    NORTH: {
-        dirX: 0,
-        dirY: -1
-    },
-    SOUTH: {
-        dirX: 0,
-        dirY: 1
-    },
-    EAST: {
-        dirX: 1,
-        dirY: 0
-    },
-    WEST: {
-        dirX: -1,
-        dirY: 0
-    },
-    NORTH_EAST: {
-        dirX: 1,
-        dirY: -1
-    },
-    SOUTH_EAST: {
-        dirX: 1,
-        dirY: 1
-    },
-    SOUTH_WEST: {
-        dirX: -1,
-        dirY: 1
-    },
-    NORTH_WEST: {
-        dirX: -1,
-        dirY: -1
-    },
-};
-}; //END  Ball prototype
 
 Artifact.prototype.setDirection = function(CARDINAL_POINT) {
     this.dirX = this.directions[CARDINAL_POINT].dirX;
@@ -127,10 +91,8 @@ Artifact.prototype.locate = function(x, y) {
 
     this.imgObj.style.left = (Math.round(x)) + 'px';
     this.imgObj.style.top = (Math.round(y)) + 'px';
-
     if (x <= 60) this.Notify(this);
 }; //End locate method
-
 
 //Sortejem direcció i comencem a moure la pola
 Artifact.prototype.start = function() {
