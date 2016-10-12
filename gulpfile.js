@@ -2,12 +2,12 @@ var gulp = require('gulp');
 var browserify = require('gulp-browserify');
 
 gulp.task('browserify', function() {
-  return gulp.
+    return gulp.
     src('./javascript/main.js').
     pipe(browserify()).
     pipe(gulp.dest('./bin'));
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['./javascript/*.js'], ['browserify']);
+    gulp.watch(['./javascript/*.js', './javascript/patterns/observer/*.js'], ['browserify']);
 });
