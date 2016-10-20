@@ -36,6 +36,22 @@ function getCookie(cname) {
     return "";
 }
 
+function showUsername (username) {
+    var welcomeMessage = "Welcome again " + username + "!";
+    document.getElementById("username").innerHTML = welcomeMessage;
+}
+
+function checkCookie() {
+    var username=getCookie("username");
+    if (username!="") {
+        showUsername(username);
+    } else {
+        username = prompt("Please enter your name:", "");
+        if (username != "" && username != null) {
+            setCookie("username", username, 365);
+        }
+    }
+}
+
 module.exports.clearSelection = clearSelection;
-module.exports.setCookie = setCookie;
-module.exports.getCookie = getCookie; 
+module.exports.checkCookie = checkCookie;
