@@ -2,6 +2,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="bin/main.js"></script>
 </head>
 
@@ -11,6 +12,24 @@
     <img id="stick" style="position:absolute" src="images/stick.png" />
     <img id="stick2" style="position:absolute" src="images/stick.png" />
     <p id="username"></p>
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">×</span>
+                <h2>Welcome to Pong Game</h2>
+            </div>
+            <div class="modal-body">
+                <p>Please enter your name</p>
+                <input type="text" name="name" id="name" placeholder="Introduce your name">
+                <input type="submit" value="Submit" id="submit">
+            </div>
+            <div class="modal-footer">
+                <h3>This is the footer</h3>
+            </div>
+        </div>
+    </div>
 
 </body>
 

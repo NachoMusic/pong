@@ -41,17 +41,12 @@ function showUsername (username) {
     document.getElementById("username").innerHTML = welcomeMessage;
 }
 
-function checkCookie() {
-    var username=getCookie("username");
-    if (username!="") {
-        showUsername(username);
-    } else {
-        username = prompt("Please enter your name:", "");
-        if (username != "" && username != null) {
-            setCookie("username", username, 365);
-        }
-    }
+function checkCookie () {
+    
 }
 
 module.exports.clearSelection = clearSelection;
 module.exports.checkCookie = checkCookie;
+module.exports.getCookie = getCookie;
+module.exports.setCookie = setCookie;
+module.exports.showUsername = showUsername;
